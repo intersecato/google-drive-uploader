@@ -88,8 +88,10 @@ function uploadToDrive(name, path) {
     }
   })
   .then(res => {
-    actions.setOutput(fileLink, `https://drive.google.com/file/d/${res.data.id}/view?usp=sharing`)
-    actions.info('File uploaded successfully')
+    // Note: link is missing https:// because slack workflows won't format variables in link targets without adding the protocol again.
+    const resultLink = `drive.google.com/file/d/${res.data.id}/view?usp=sharing`
+    actions.setOutput(fileLink, resultLink)
+    actions.info(`File uploaded successfully: https://${resultLink}`)
   })
   .catch(e => {
     actions.error('Upload failed');

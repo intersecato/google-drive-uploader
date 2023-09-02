@@ -13,12 +13,13 @@
   "author": "Yayo Acosta",
   "license": "ISC",
   "dependencies": {
-    "@actions/core": "^1.2.4",
-    "archiver": "^4.0.1",
-    "glob": "^7.1.7",
-    "googleapis": "^51.0.0"
+    "@actions/core": "^1.10.0",
+    "@actions/github": "^5.1.1",
+    "archiver": "^6.0.0",
+    "glob": "^10.3.3",
+    "googleapis": "^126.0.0"
   },
   "devDependencies": {
-    "@zeit/ncc": "^0.22.3"
+    "@vercel/ncc": "^0.36.1"
   }
 }
