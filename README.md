@@ -112,7 +112,7 @@ jobs:
         uses: actions/checkout@v2
       # Upload to Drive
       - name: Upload README.md to Google Drive
-        uses: Jodebu/upload-to-drive@master
+        uses: intersecato/google-drive-uploader@1.0.0
         with:
           target: README.md
           credentials: secrets.<YOUR_DRIVE_CREDENTIALS>
@@ -135,7 +135,7 @@ jobs:
         uses: actions/checkout@v2
       # Upload to Drive
       - name: Upload public folder to Google Drive
-        uses: Jodebu/upload-to-drive@master
+        uses: intersecato/google-drive-uploader@1.0.0
         with:
           target: public
           credentials: secrets.<YOUR_DRIVE_CREDENTIALS>
@@ -158,7 +158,7 @@ jobs:
         uses: actions/checkout@v2
       # Upload to Drive
       - name: Upload public folder to Google Drive
-        uses: Jodebu/upload-to-drive@master
+        uses: intersecato/google-drive-uploader@1.0.0
         id: driveUpload
         with:
           target: public
@@ -239,7 +239,7 @@ jobs:
 
       # Upload to Drive
       - name: Upload build to Google Drive
-        uses: Jodebu/upload-to-drive@master
+        uses: intersecato/google-drive-uploader@1.0.0
         with:
           target: build
           name: ${{ matrix.targetPlatform }}
