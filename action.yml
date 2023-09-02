@@ -1,6 +1,6 @@
-name: 'Upload to Google Drive (forked)'
+name: 'Upload to Google Drive'
 description: 'Uploads a file or a folder to Google Drive'
-author: 'Yayo Acosta & Max Isom'
+author: 'intersecato'
 inputs:
   credentials:
     description: 'Google Service Account credentials'
