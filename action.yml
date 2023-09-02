@@ -1,0 +1,28 @@
+name: 'Upload to Google Drive (forked)'
+description: 'Uploads a file or a folder to Google Drive'
+author: 'Yayo Acosta & Max Isom'
+inputs:
+  credentials:
+    description: 'Google Service Account credentials'
+    required: true
+  folder:
+    description: 'Google Drive folder ID to upload the file/folder to'
+    required: true
+  target:
+    description: 'Local path to the file/folder to upload'
+    required: true
+  name:
+    description: 'Optional name for the zipped file'
+    required: false
+    default: null
+outputs:
+  link:
+    description: 'A link to the Drive folder'
+  fileLink:
+    description: 'A direct link to the uploaded file'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
+branding:
+  icon: 'upload-cloud'
+  color: 'orange'
