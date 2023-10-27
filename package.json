@@ -1,16 +1,16 @@
 {
-  "name": "upload-to-drive",
-  "version": "1.0.0",
+  "name": "google-drive-uploader",
+  "version": "1.1",
   "description": "Github action to upload files or folders to Google Drive",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Jodebu/upload-to-drive"
+    "url": "hhttps://github.com/intersecato/google-drive-uploader"
   },
   "main": "index.js",
   "scripts": {
     "build": "ncc build index.js -C -m -o dist"
   },
-  "author": "Yayo Acosta",
+  "author": "intersecato",
   "license": "ISC",
   "dependencies": {
     "@actions/core": "^1.10.0",
