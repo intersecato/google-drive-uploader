@@ -29,7 +29,9 @@ async function main() {
 
   const targets = glob.sync(target);
 
-  if (targets.length === 1) {
+  if (targets.length === 0) {
+    actions.error(`No item detected for glob ${target}`);
+  } else if (targets.length === 1) {
     const filename = targets[0].split('/').pop();
     uploadToDrive(filename, targets[0]);
   } else {
