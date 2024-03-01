@@ -18,10 +18,6 @@
     - [Complex workflow example](#complex-workflow-example)
 - [Documentation](#documentation)
 
-## Changes
-### v1.1
-Added an output with a link to the Drive folder.
-
 ## Setup
 This section lists the requirements to make this action work and how to meet them.
 
@@ -112,7 +108,7 @@ jobs:
         uses: actions/checkout@v2
       # Upload to Drive
       - name: Upload README.md to Google Drive
-        uses: intersecato/google-drive-uploader@1.0.0
+        uses: intersecato/google-drive-uploader@1.2
         with:
           target: README.md
           credentials: secrets.<YOUR_DRIVE_CREDENTIALS>
@@ -135,7 +131,7 @@ jobs:
         uses: actions/checkout@v2
       # Upload to Drive
       - name: Upload public folder to Google Drive
-        uses: intersecato/google-drive-uploader@1.0.0
+        uses: intersecato/google-drive-uploader@1.2
         with:
           target: public
           credentials: secrets.<YOUR_DRIVE_CREDENTIALS>
@@ -158,7 +154,7 @@ jobs:
         uses: actions/checkout@v2
       # Upload to Drive
       - name: Upload public folder to Google Drive
-        uses: intersecato/google-drive-uploader@1.0.0
+        uses: intersecato/google-drive-uploader@1.2
         id: driveUpload
         with:
           target: public
@@ -239,7 +235,7 @@ jobs:
 
       # Upload to Drive
       - name: Upload build to Google Drive
-        uses: intersecato/google-drive-uploader@1.0.0
+        uses: intersecato/google-drive-uploader@1.2
         with:
           target: build
           name: ${{ matrix.targetPlatform }}
